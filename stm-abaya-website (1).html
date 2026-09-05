@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STM Abaya Collections — Elegant &amp; Modest Fashion</title>
+  <meta name="description" content="STM Abaya Collections — Elegant &amp; Modest Fashion. Shop premium abayas in Pakistan. Cash on Delivery available nationwide."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --ivory:#FAF9F6;--sage:#A8B5A2;--sage-dark:#8fa389;
+      --charcoal:#333333;--charcoal-lt:#555555;
+      --gold:#D4B483;--gold-lt:#e8d4a8;--white:#ffffff;--border:#e8e4de;
+      --font-heading:'Cormorant Garamond',Georgia,serif;
+      --font-body:'Lato',Arial,sans-serif;
+      --max-w:1200px;--section-pad:80px 24px;
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--ivory);color:var(--charcoal);font-family:var(--font-body);font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+
+    /* TYPOGRAPHY */
+    h1,h2,h3,h4{font-family:var(--font-heading);font-weight:400;color:var(--charcoal);letter-spacing:0.02em;line-height:1.2}
+    h1{font-size:clamp(2.4rem,6vw,4rem)}
+    h2{font-size:clamp(1.8rem,4vw,2.8rem)}
+    h3{font-size:clamp(1.3rem,2.5vw,1.7rem)}
+    .section-label{font-family:var(--font-body);font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:12px}
+    .section-title{margin-bottom:8px}
+    .section-subtitle{color:var(--charcoal-lt);font-size:0.95rem;max-width:520px}
+    .section-header{text-align:center;margin-bottom:52px}
+    .section-header .section-subtitle{margin:0 auto}
+    .gold-rule{width:48px;height:1px;background:var(--gold);margin:20px auto 0}
+
+    /* BUTTONS */
+    .btn{display:inline-block;padding:13px 32px;font-family:var(--font-body);font-size:0.8rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;border:none;transition:background 0.25s,color 0.25s,box-shadow 0.25s;text-align:center}
+    .btn-primary{background:var(--sage);color:var(--white)}
+    .btn-primary:hover{background:var(--sage-dark);box-shadow:0 4px 16px rgba(168,181,162,0.35)}
+    .btn-outline{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,0.7)}
+    .btn-outline:hover{background:rgba(255,255,255,0.12)}
+
+    /* NAV */
+    #navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(250,249,246,0.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center}
+    .nav-inner{width:100%;max-width:var(--max-w);margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+    .nav-brand{font-family:var(--font-heading);font-size:1.4rem;font-weight:500;color:var(--charcoal);letter-spacing:0.04em}
+    .nav-brand span{color:var(--gold)}
+    .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+    .nav-links a{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--charcoal-lt);transition:color 0.2s}
+    .nav-links a:hover{color:var(--charcoal)}
+    .nav-cta{background:var(--sage);color:var(--white)!important;padding:8px 18px}
+    .nav-cta:hover{background:var(--sage-dark)}
+    .nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--charcoal)}
+    @media(max-width:900px){
+      .nav-toggle{display:flex}
+      .nav-links{display:none;position:fixed;top:64px;left:0;right:0;background:var(--ivory);flex-direction:column;padding:24px;gap:20px;border-bottom:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,0.08)}
+      .nav-links.open{display:flex}
+    }
+
+    /* HERO */
+    #hero{margin-top:64px;min-height:calc(100vh - 64px);display:flex;align-items:center;justify-content:flex-start;position:relative;overflow:hidden;background-image:url('https://static.wixstatic.com/media/b15e09_e0f3a06ce355421f84dedbcfccc66437~mv2.jpg');background-size:cover;background-position:center top}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.2) 60%,rgba(0,0,0,0.05) 100%);z-index:1}
+    .hero-frame{position:absolute;inset:32px;border:1px solid rgba(212,180,131,0.25);z-index:2;pointer-events:none}
+    .hero-content{position:relative;z-index:3;padding:60px 48px;max-width:640px}
+    .hero-eyebrow{font-size:0.72rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:20px}
+    .hero-title{font-family:var(--font-heading);font-size:clamp(3rem,7vw,5.5rem);font-weight:300;color:var(--white);margin-bottom:16px;letter-spacing:0.04em}
+    .hero-subtitle{font-size:0.85rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:12px}
+    .hero-tagline{font-family:var(--font-heading);font-size:clamp(1.1rem,2.5vw,1.5rem);font-style:italic;color:var(--gold-lt);margin-bottom:16px}
+    .hero-brand-stmt{font-size:0.88rem;color:rgba(255,255,255,0.65);margin-bottom:40px;max-width:400px;line-height:1.7}
+    .hero-divider{width:40px;height:1px;background:var(--gold);margin:0 0 32px}
+    .hero-buttons{display:flex;gap:16px;flex-wrap:wrap}
+    @media(max-width:768px){
+      #hero{min-height:90vh;align-items:flex-end}
+      .hero-content{padding:32px 24px 48px;text-align:center;max-width:100%}
+      .hero-overlay{background:rgba(0,0,0,0.5)}
+      .hero-frame{display:none}
+      .hero-divider{margin:0 auto 32px}
+      .hero-buttons{justify-content:center}
+      .hero-brand-stmt{margin:0 auto 40px}
+    }
+
+    /* CATEGORY CARDS */
+    #categories{padding:70px 24px;background:var(--ivory)}
+    .categories-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:var(--max-w);margin:0 auto}
+    .category-card{background:var(--white);border:1px solid var(--border);padding:36px 20px;text-align:center;cursor:pointer;transition:all 0.3s;text-decoration:none;display:block;position:relative;overflow:hidden}
+    .category-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transition:transform 0.3s}
+    .category-card:hover{box-shadow:0 8px 32px rgba(51,51,51,0.1);transform:translateY(-4px)}
+    .category-card:hover::before{transform:scaleX(1)}
+    .category-emoji{font-size:2rem;margin-bottom:14px;display:block}
+    .category-name{font-family:var(--font-heading);font-size:1.15rem;font-weight:500;color:var(--charcoal);margin-bottom:6px}
+    .category-desc{font-size:0.75rem;color:var(--charcoal-lt);letter-spacing:0.08em;text-transform:uppercase}
+    @media(max-width:768px){.categories-grid{grid-template-columns:repeat(2,1fr);gap:14px}}
+    @media(max-width:480px){.category-card{padding:24px 14px}.category-emoji{font-size:1.6rem}}
+
+    /* PRODUCT GRID & CARDS */
+    .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+    @media(max-width:900px){.product-grid{grid-template-columns:repeat(2,1fr);gap:20px}}
+    @media(max-width:480px){.product-grid{grid-template-columns:1fr;gap:16px}}
+    .product-card{background:var(--white);border:1px solid var(--border);transition:box-shadow 0.3s,transform 0.3s;overflow:hidden}
+    .product-card:hover{box-shadow:0 8px 32px rgba(51,51,51,0.1);transform:translateY(-3px)}
+    .product-img-placeholder{width:100%;aspect-ratio:3/4;background:linear-gradient(160deg,#ece9e3 0%,#d8d3ca 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:#b0a898;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;position:relative}
+    .product-img-placeholder::after{content:'';position:absolute;inset:0;border:1px solid rgba(212,180,131,0.2)}
+    .img-icon{width:36px;height:36px;opacity:0.4}
+    .product-badge{position:absolute;top:14px;left:14px;background:var(--sage);color:var(--white);font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:4px 10px;z-index:2}
+    .badge-gold{background:var(--gold);color:var(--charcoal)}
+    .product-info{padding:20px;border-top:1px solid var(--border)}
+    .product-name{font-family:var(--font-heading);font-size:1.15rem;font-weight:500;margin-bottom:10px}
+    .product-meta{list-style:none;margin-bottom:12px}
+    .product-meta li{display:flex;justify-content:space-between;font-size:0.8rem;color:var(--charcoal-lt);padding:3px 0;border-bottom:1px solid #f0ede8}
+    .product-meta li:last-child{border-bottom:none}
+    .meta-label{font-weight:700;text-transform:uppercase;letter-spacing:0.06em;font-size:0.7rem;color:#888}
+    .product-desc{font-size:0.8rem;color:var(--charcoal-lt);line-height:1.6;margin-bottom:14px;font-style:italic}
+    .product-footer{display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--border)}
+    .product-price{font-family:var(--font-heading);font-size:1.25rem;font-weight:600}
+    .product-order-btn{display:inline-flex;align-items:center;gap:6px;background:var(--sage);color:var(--white);font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:9px 14px;transition:background 0.25s}
+    .product-order-btn:hover{background:var(--sage-dark)}
+
+    /* SECTIONS */
+    .section-pad{padding:var(--section-pad)}
+    .section-ivory{background:var(--ivory)}
+    .section-white{background:var(--white)}
+    @media(max-width:768px){:root{--section-pad:56px 20px}}
+
+    /* FEATURED */
+    #featured{padding:var(--section-pad);background:var(--white)}
+
+    /* WHY CHOOSE US */
+    #why-us{padding:var(--section-pad);background:var(--sage)}
+    #why-us .section-label{color:rgba(255,255,255,0.7)}
+    #why-us .section-title{color:var(--white)}
+    #why-us .gold-rule{background:rgba(255,255,255,0.45)}
+    .features-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;text-align:center}
+    @media(max-width:900px){.features-grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:480px){.features-grid{grid-template-columns:repeat(2,1fr)}}
+    .feature-item{padding:24px 12px}
+    .feature-icon{width:52px;height:52px;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.4);border-radius:50%}
+    .feature-icon svg{width:24px;height:24px;stroke:var(--white);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+    .feature-title{font-family:var(--font-heading);font-size:1rem;font-weight:500;color:var(--white);margin-bottom:6px}
+    .feature-desc{font-size:0.78rem;color:rgba(255,255,255,0.8);line-height:1.6}
+
+    /* REVIEWS */
+    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    @media(max-width:768px){.reviews-grid{grid-template-columns:1fr}}
+    .review-card{background:var(--ivory);border:1px solid var(--border);padding:32px 28px;position:relative}
+    .review-card::before{content:'\201C';font-family:var(--font-heading);font-size:5rem;color:var(--gold);opacity:0.25;position:absolute;top:8px;left:20px;line-height:1}
+    .review-stars{display:flex;gap:3px;margin-bottom:16px}
+    .star{width:14px;height:14px;fill:var(--gold)}
+    .review-text{font-family:var(--font-heading);font-size:1rem;font-style:italic;color:var(--charcoal-lt);line-height:1.7;margin-bottom:20px}
+    .review-author{font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase}
+    .reviews-note{text-align:center;margin-top:32px;font-size:0.8rem;color:var(--charcoal-lt);font-style:italic}
+
+    /* HOW TO ORDER */
+    .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    @media(max-width:768px){.steps-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.steps-grid{grid-template-columns:1fr}}
+    .step-card{text-align:center;padding:32px 20px;background:var(--white);border:1px solid var(--border);position:relative}
+    .step-card::before{content:'';position:absolute;top:0;left:0;width:32px;height:3px;background:var(--gold)}
+    .step-number{font-family:var(--font-heading);font-size:3rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:16px}
+    .step-title{font-family:var(--font-heading);font-size:1.05rem;font-weight:500;margin-bottom:8px}
+    .step-desc{font-size:0.8rem;color:var(--charcoal-lt);line-height:1.6}
+    .order-note{margin-top:40px;text-align:center;font-size:0.85rem;color:var(--charcoal-lt);font-style:italic;padding:16px;border:1px solid var(--border);background:var(--white);max-width:600px;margin-left:auto;margin-right:auto}
+
+    /* INSTAGRAM */
+    #instagram{padding:var(--section-pad);background:var(--ivory);text-align:center}
+    .instagram-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:var(--max-w);margin:0 auto 32px}
+    @media(max-width:768px){.instagram-grid{grid-template-columns:repeat(2,1fr)}}
+    .instagram-tile{aspect-ratio:1;background:linear-gradient(135deg,#e8e3db,#d4c9ba);display:flex;align-items:center;justify-content:center;font-size:0.72rem;color:#b0a898;letter-spacing:0.1em;text-transform:uppercase;transition:opacity 0.2s;cursor:pointer;text-align:center;padding:16px}
+    .instagram-tile:hover{opacity:0.8}
+
+    /* FINAL CTA */
+    #final-cta{padding:80px 24px;background:var(--charcoal);text-align:center}
+    #final-cta h2{color:var(--white);margin-bottom:12px}
+    #final-cta p{color:rgba(255,255,255,0.65);margin-bottom:36px;font-size:0.95rem;max-width:500px;margin-left:auto;margin-right:auto}
+    #final-cta .gold-rule{background:rgba(212,180,131,0.4);margin-bottom:32px}
+    .cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+    /* ABOUT */
+    .about-inner{max-width:680px;margin:0 auto;text-align:center}
+    .about-text{font-family:var(--font-heading);font-size:clamp(1.1rem,2.5vw,1.4rem);line-height:1.85;color:var(--charcoal-lt);font-weight:300;margin-bottom:32px}
+    .about-badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+    .about-badge{font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--charcoal-lt);border:1px solid var(--border);padding:6px 16px;background:var(--white)}
+
+    /* CONTACT */
+    #contact{padding:var(--section-pad);background:var(--charcoal)}
+    #contact .section-title{color:var(--white)}
+    #contact .section-label{color:var(--gold-lt)}
+    #contact .gold-rule{background:rgba(212,180,131,0.5)}
+    .contact-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+    .contact-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.25s}
+    .btn-whatsapp{background:#25D366;color:var(--white)}
+    .btn-whatsapp:hover{background:#1dba58;box-shadow:0 4px 16px rgba(37,211,102,0.3)}
+    .btn-instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:var(--white)}
+    .btn-instagram:hover{opacity:0.9}
+    .contact-details{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+    .contact-pill{display:inline-flex;align-items:center;gap:8px;font-size:0.78rem;color:rgba(255,255,255,0.65);letter-spacing:0.08em}
+
+    /* FOOTER */
+    footer{background:#1e1d1b;color:rgba(255,255,255,0.5);padding:48px 24px 28px;text-align:center}
+    .footer-brand{font-family:var(--font-heading);font-size:1.6rem;font-weight:400;color:var(--white);margin-bottom:4px;letter-spacing:0.04em}
+    .footer-brand span{color:var(--gold)}
+    .footer-tagline{font-size:0.75rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
+    .footer-divider{width:40px;height:1px;background:rgba(212,180,131,0.3);margin:0 auto 24px}
+    .footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:24px;list-style:none;margin-bottom:24px}
+    .footer-links a{font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);transition:color 0.2s}
+    .footer-links a:hover{color:var(--gold)}
+    .footer-info{font-size:0.8rem;color:rgba(255,255,255,0.4);margin-bottom:6px}
+    .footer-copy{font-size:0.72rem;color:rgba(255,255,255,0.25);margin-top:24px}
+
+    /* FLOATING WA BUTTON */
+    .wa-float{position:fixed;bottom:28px;right:28px;z-index:999;background:#25D366;color:var(--white);width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.45);transition:transform 0.2s,box-shadow 0.2s}
+    .wa-float:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,0.55)}
+    .wa-float svg{width:28px;height:28px;fill:var(--white)}
+    @media(max-width:480px){
+      .contact-buttons{flex-direction:column;align-items:center}
+      .hero-buttons{flex-direction:column;align-items:center}
+      .cta-buttons{flex-direction:column;align-items:center}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#hero">STM <span>Abaya</span> Collections</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="#categories">Collections</a></li>
+      <li><a href="#new-arrivals">New Arrivals</a></li>
+      <li><a href="#best-sellers">Best Sellers</a></li>
+      <li><a href="#everyday">Everyday</a></li>
+      <li><a href="#premium">Premium</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="nav-cta" href="https://wa.me/923294271035?text=Hi%2C%20I%20would%20like%20to%20order%20from%20STM%20Abaya%20Collections">Order on WhatsApp</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- 1. HERO -->
+<section id="hero" role="banner">
+  <div class="hero-overlay"></div>
+  <div class="hero-frame" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Pakistan's Finest Modest Fashion</p>
+    <h1 class="hero-title">STM Abaya<br>Collections</h1>
+    <p class="hero-subtitle">Elegant &amp; Modest Fashion</p>
+    <p class="hero-tagline">"Elegance in Every Detail"</p>
+    <p class="hero-brand-stmt">Discover our curated collection of premium abayas — crafted for the modern woman who values comfort, quality and timeless style.</p>
+    <div class="hero-divider"></div>
+    <div class="hero-buttons">
+      <a class="btn btn-primary" href="#categories">Explore Collection</a>
+      <a class="btn btn-outline" href="https://wa.me/923294271035?text=Hi%2C%20I%20would%20like%20to%20browse%20STM%20Abaya%20Collections">Order on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- 2. EXPLORE — CATEGORY CARDS -->
+<section id="categories" aria-label="Shop by Category">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Browse by Style</span>
+      <h2 class="section-title">Explore Our Collection</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="categories-grid">
+      <a class="category-card" href="#new-arrivals">
+        <span class="category-emoji">🌿</span>
+        <div class="category-name">New Arrivals</div>
+        <div class="category-desc">Fresh styles just in</div>
+      </a>
+      <a class="category-card" href="#best-sellers">
+        <span class="category-emoji">✨</span>
+        <div class="category-name">Best Sellers</div>
+        <div class="category-desc">Our most loved pieces</div>
+      </a>
+      <a class="category-card" href="#everyday">
+        <span class="category-emoji">🤎</span>
+        <div class="category-name">Everyday Abayas</div>
+        <div class="category-desc">Effortless daily elegance</div>
+      </a>
+      <a class="category-card" href="#premium">
+        <span class="category-emoji">🛍️</span>
+        <div class="category-name">Premium Collection</div>
+        <div class="category-desc">Luxury for every occasion</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 3. FEATURED / TRENDING -->
+<section id="featured" aria-label="Featured Products">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Trending Now</span>
+      <h2 class="section-title">Featured Styles</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="product-grid" id="grid-featured">
+      <div class="product-card">
+        <div class="product-img-placeholder">
+          <span class="product-badge badge-gold">Trending</span>
+          <svg class="img-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Zardozi · Black</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Zardozi Embroidery Abaya</div>
+          <ul class="product-meta">
+            <li><span class="meta-label">Colour</span><span>Black</span></li>
+            <li><span class="meta-label">Fabric</span><span>Tiktok Fabric</span></li>
+            <li><span class="meta-label">Size</span><span>Standard · 56"</span></li>
+          </ul>
+          <p class="product-desc">Crisp black with gleaming dual-tone golden &amp; silver Zardozi embroidery. The classic, perfected.</p>
+          <div class="product-footer">
+            <span class="product-price">Rs. 3,800</span>
+            <a class="product-order-btn" href="https://wa.me/923294271035?text=Hi%2C%20I%20am%20interested%20in%20the%20Zardozi%20Embroidery%20Abaya%20in%20Black" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-placeholder">
+          <span class="product-badge badge-gold">Trending</span>
+          <svg class="img-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Floral Crystal · Sage Green</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Floral Crystal Marble Abaya</div>
+          <ul class="product-meta">
+            <li><span class="meta-label">Colour</span><span>Soft Sage Green</span></li>
+            <li><span class="meta-label">Fabric</span><span>Marble Print</span></li>
+            <li><span class="meta-label">Size</span><span>Standard · 56"</span></li>
+          </ul>
+          <p class="product-desc">A water-marbled sage canvas blooming with floral and crystal embellishments. Art in motion.</p>
+          <div class="product-footer">
+            <span class="product-price">Rs. 3,800</span>
+            <a class="product-order-btn" href="https://wa.me/923294271035?text=Hi%2C%20I%20am%20interested%20in%20the%20Floral%20Crystal%20Marble%20Abaya%20in%20Soft%20Sage%20Green" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-placeholder">
+          <span class="product-badge badge-gold">Trending</span>
+          <svg class="img-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Tie-Kaftan · Dusty Pink</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Tie-Kaftan Abaya</div>
+          <ul class="product-meta">
+            <li><span class="meta-label">Colour</span><span>Dusty Pink</span></li>
+            <li><span class="meta-label">Fabric</span><span>Imported Georgette</span></li>
+            <li><span class="meta-label">Size</span><span>Standard · 56"</span></li>
+          </ul>
+          <p class="product-desc">Soft, feminine Georgette with elegant tie sleeves. Modest, effortless and beautifully draped.</p>
+          <div class="product-footer">
+            <span class="product-price">Rs. 4,500</span>
+            <a class="product-order-btn" href="https://wa.me/923294271035?text=Hi%2C%20I%20am%20interested%20in%20the%20Tie-Kaftan%20Abaya%20in%20Dusty%20Pink" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. WHY CHOOSE STM -->
+<section id="why-us" aria-label="Why Choose STM">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Our Promise</span>
+      <h2 class="section-title">Why Choose STM</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <div class="feature-title">Premium Quality Fabric</div>
+        <div class="feature-desc">Carefully selected imported fabrics — soft, breathable and long-lasting</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+        <div class="feature-title">Elegant &amp; Modest Designs</div>
+        <div class="feature-desc">Timeless styles crafted for the modern modest woman</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+        <div class="feature-title">Cash on Delivery</div>
+        <div class="feature-desc">Pay when your order arrives — no advance payment needed</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div class="feature-title">Nationwide Delivery</div>
+        <div class="feature-desc">We deliver to every city across Pakistan in 3–5 working days</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <div class="feature-title">Customer Satisfaction</div>
+        <div class="feature-desc">Your happiness is our priority — we're always here to help</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. CUSTOMER REVIEWS -->
+<section id="reviews" class="section-pad section-white" aria-label="Customer Reviews">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">What Our Customers Say</span>
+      <h2 class="section-title">Customer Reviews</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">
+          <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Your review will appear here. We'd love to hear from you!"</p>
+        <div class="review-author">— [Customer Name]</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">
+          <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Your review will appear here. We'd love to hear from you!"</p>
+        <div class="review-author">— [Customer Name]</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">
+          <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Your review will appear here. We'd love to hear from you!"</p>
+        <div class="review-author">— [Customer Name]</div>
+      </div>
+    </div>
+    <p class="reviews-note">Real customer reviews coming soon — be the first to share your experience! 🌿</p>
+  </div>
+</section>
+
+<!-- 6. HOW TO ORDER -->
+<section id="how-to-order" class="section-pad section-ivory" aria-label="How to Order">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Simple &amp; Easy</span>
+      <h2 class="section-title">How to Order</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">01</div>
+        <div class="step-title">Choose Your Abaya</div>
+        <p class="step-desc">Browse our collection and find the perfect abaya for you</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">02</div>
+        <div class="step-title">Click "Order on WhatsApp"</div>
+        <p class="step-desc">Tap the button on any product to message us directly</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">03</div>
+        <div class="step-title">Confirm Your Details</div>
+        <p class="step-desc">Share your name, address and colour choice with us</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">04</div>
+        <div class="step-title">Receive Your Order</div>
+        <p class="step-desc">We dispatch your abaya and deliver it to your door</p>
+      </div>
+    </div>
+    <div class="order-note">Orders are confirmed through WhatsApp or Instagram DM. 📦 COD Available &nbsp;|&nbsp; 🚚 Nationwide Delivery across Pakistan</div>
+  </div>
+</section>
+
+<!-- 7. NEW ARRIVALS -->
+<section id="new-arrivals" class="section-pad section-white" aria-label="New Arrivals">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Just In</span>
+      <h2 class="section-title">New Arrivals</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="product-grid" id="grid-new-arrivals">
+      <div class="product-card">
+        <div class="product-img-placeholder">
+          <span class="product-badge">New</span>
+          <svg class="img-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Add Product Photo</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">[Product Name]</div>
+          <ul class="product-meta">
+            <li><span class="meta-label">Colour</span><span>[Colour]</span></li>
+            <li><span class="meta-label">Fabric</span><span>[Fabric]</span></li>
+            <li><span class="meta-label">Size</span><span>Standard · 56"</span></li>
+          </ul>
+          <p class="product-desc">[Add a short description of this abaya here]</p>
+          <div class="product-footer">
+            <span class="product-price">Rs. [X,XXX]</span>
+            <a class="product-order-btn" href="https://wa.me/923294271035?text=Hi%2C%20I%20am%20interested%20in%20ordering%20a%20new%20arrival%20abaya" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-placeholder">
+          <span class="product-badge">New</span>
+          <svg class="img-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Add Product Photo</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">[Product Name]</div>
+          <ul class="product-meta">
+            <li><span class="meta-label">Colour</span><span>[Colour]</span></li>
+            <li><span class="meta-label">Fabric</span><span>[Fabric]</span></li>
+            <li><span class="meta-label">Size</span><span>Standard · 56"</span></li>
+          </ul>
+          <p class="product-desc">[Add a short description of this abaya here]</p>
+          <div class="product-footer">
+            <span class="product-price">Rs. [X,XXX]</span>
+            <a class="product-order-btn" href="https://wa.me/923294271035?text=Hi%2C%20I%20am%20interested%20in%20ordering%20a%20new%20arrival%20abaya" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-placeholder">
+          <span class="product-badge">New</span>
+          <svg class="img-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Add Product Photo</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">[Product Name]</div>
+          <ul class="product-meta">
+            <li><span class="meta-label">Colour</span><span>[Colour]</span></li>
+            <li><span class="meta-label">Fabric</span><span>[Fabric]</span></li>
+            <li><span class="meta-label">Size</span><span>Standard · 56"</span></li>
+          </ul>
+          <p class="product-desc">[Add a short description of this abaya here]</p>
+          <div class="product-footer">
+            <span class="product-price">Rs. [X,XXX]</span>
+            <a class="product-order-btn" href="https://wa.me/923294271035?text=Hi%2C%20I%20am%20interested%20in%20ordering%20a%20new%20arrival%20abaya" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEST SELLERS -->
+<section id="best-sellers" class="section-pad section-ivory" aria-label="Best Sellers">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Most Loved</span>
+      <h2 class="section-title">Best Sellers</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="product-grid" id="grid-best-sellers">
+      <div class="product-card">
+        <div class="product-img-placeholder">
+          <span class="product-badge">Best Seller</span>
+          <svg class="img-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Zardozi · Black</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Zardozi Embroidery Abaya</div>
+          <ul class="product-meta">
+            <li><span class="meta-label">Colour</span><span>Black</span></li>
+            <li><span class="meta-label">Fabric</span><span>Tiktok Fabric</span></li>
+            <li><span class="meta-label">Style</span><span>Front-Open</span></li>
+            <li><span class="meta-label">Size</span><span>Standard · 56"</span></li>
+          </ul>
+          <p class="product-desc">Crisp black with gleaming dual-tone golden &amp; silver Zardozi embroidery. The classic, perfected.</p>
+          <div class="product-footer">
+            <span class="product-price">Rs. 3,800</span>
+            <a class="product-order-btn" href="https://wa.me/923294271035?text=Hi%2C%20I%20am%20interested%20in%20the%20Zardozi%20Embroidery%20Abaya%20in%20Black" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-placeholder">
+          <span class="product-badge">Best Seller</span>
+          <svg class="img-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Plain Maxi · Black</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Plain Maxi Nida Abaya</div>
+          <ul class="product-meta">
+            <li><span class="meta-label">Colour</span><span>Black</span></li>
+            <li><span class="meta-label">Fabric</span><span>Imported Nida</span></li>
+            <li><span class="meta-label">Style</span><span>Maxi</span></li>
+            <li><span class="meta-label">Size</span><span>Standard · 56"</span></li>
+          </ul>
+          <p class="product-desc">Smooth black imported Nida in a clean generous maxi with bishop sleeves. Classic. Essential. Always correct.</p>
+          <div class="product-footer">
+            <span class="product-price">Rs. 3,000</span>
+            <a class="product-order-btn" href="https://wa.me/923294271035?text=Hi%2C%20I%20am%20interested%20in%20the%20Plain%20Maxi%20Nida%20Abaya%20in%20Black" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-placeholder">
+          <span class="product-badge">Best Seller</span>
+          <svg class="img-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Tie-Kaftan · Dusty Pink</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Tie-Kaftan Abaya</div>
+          <ul class="product-meta">
+            <li><span class="meta-label">Colour</span><span>Dusty Pink</span></li>
+            <li><span class="meta-label">Fabric</span><span>Imported Georgette</span></li>
+            <li><span class="meta-label">Style</span><span>Tie-Kaftan</span></li>
+            <li><span class="meta-label">Size</span><span>Standard · 56"</span></li>
+          </ul>
+          <p class="product-desc">Soft, feminine Georgette with elegant tie sleeves. Modest, effortless and beautifully draped.</p>
+          <div class="product-footer">
+            <span class="product-price">Rs. 4,500</span>
+            <a class="product-order-btn" href="https://wa.me/923294271035?text=Hi%2C%20I%20am%20interested%20in%20the%20Tie-Kaftan%20Abaya%20in%20Dusty%20Pink" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVERYDAY ABAYAS -->
+<section id="everyday" class="section-pad section-white" aria-label="Everyday Abayas">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Daily Elegance</span>
+      <h2 class="section-title">Everyday Abayas</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="product-grid" id="grid-everyday">
+      <div class="product-card">
+        <div class="product-img-placeholder">
+          <svg class="img-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Plain Maxi · Navy Blue</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Plain Maxi Nida Abaya</div>
+          <ul class="product-meta">
+            <li><span class="meta-label">Colour</span><span>Navy Blue</span></li>
+            <li><span class="meta-label">Fabric</span><span>Imported Nida</span></li>
+            <li><span class="meta-label">Size</span><span>Standard · 56"</span></li>
+          </ul>
+          <p class="product-desc">Classic deep navy Nida with a quiet authority and graceful A-line silhouette. The navy abaya every wardrobe needs.</p>
+          <div class="product-footer">
+            <span class="product-price">Rs. 3,000</span>
+            <a class="product-order-btn" href="https://wa.me/923294271035?text=Hi%2C%20I%20am%20interested%20in%20the%20Plain%20Maxi%20Nida%20Abaya%20in%20Navy%20Blue" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-placeholder">
+          <svg class="img-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Baggy Style · Brown</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Baggy Style Nida Abaya</div>
+          <ul class="product-meta">
+            <li><span class="meta-label">Colour</span><span>Brown</span></li>
+            <li><span class="meta-label">Fabric</span><span>Nida</span></li>
+            <li><span class="meta-label">Size</span><span>Standard · 56"</span></li>
+          </ul>
+          <p class="product-desc">Warm earthy Nida with a generous, relaxed fit and delicate tassel finish. Effortless everyday elegance.</p>
+          <div class="product-footer">
+            <span class="product-price">Rs. 4,000</span>
+            <a class="product-order-btn" href="https://wa.me/923294271035?text=Hi%2C%20I%20am%20interested%20in%20the%20Baggy%20Style%20Nida%20Abaya%20in%20Brown" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-placeholder">
+          <svg class="img-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Umbrella Georgette · Beige</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Umbrella Tail Georgette Abaya</div>
+          <ul class="product-meta">
+            <li><span class="meta-label">Colour</span><span>Beige</span></li>
+            <li><span class="meta-label">Fabric</span><span>Premium Georgette</span></li>
+            <li><span class="meta-label">Size</span><span>Standard · 56"</span></li>
+          </ul>
+          <p class="product-desc">Sandy summer Georgette in a graceful umbrella flare. Lightweight, breathable and effortlessly beautiful.</p>
+          <div class="product-footer">
+            <span class="product-price">Rs. 3,000</span>
+            <a class="product-order-btn" href="https://wa.me/923294271035?text=Hi%2C%20I%20am%20interested%20in%20the%20Umbrella%20Tail%20Georgette%20Abaya%20in%20Beige" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREMIUM COLLECTION -->
+<section id="premium" class="section-pad section-ivory" aria-label="Premium Collection">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Luxury &amp; Special Occasions</span>
+      <h2 class="section-title">Premium Collection</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="product-grid" id="grid-premium">
+      <div class="product-card">
+        <div class="product-img-placeholder">
+          <span class="product-badge badge-gold">Premium</span>
+          <svg class="img-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Floral Crystal · Smokey Gray</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Floral Crystal Marble Abaya</div>
+          <ul class="product-meta">
+            <li><span class="meta-label">Colour</span><span>Smokey Gray</span></li>
+            <li><span class="meta-label">Fabric</span><span>Marble Print</span></li>
+            <li><span class="meta-label">Size</span><span>Standard · 56"</span></li>
+          </ul>
+          <p class="product-desc">Deep charcoal marble with rich blush-pink floral embellishments. Understated power dressed in smoke.</p>
+          <div class="product-footer">
+            <span class="product-price">Rs. 3,800</span>
+            <a class="product-order-btn" href="https://wa.me/923294271035?text=Hi%2C%20I%20am%20interested%20in%20the%20Floral%20Crystal%20Marble%20Abaya%20in%20Smokey%20Gray" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-placeholder">
+          <span class="product-badge badge-gold">Premium</span>
+          <svg class="img-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Tail Umbrella · Burgundy</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Tail Umbrella Satin Abaya</div>
+          <ul class="product-meta">
+            <li><span class="meta-label">Colour</span><span>Burgundy</span></li>
+            <li><span class="meta-label">Fabric</span><span>Imported Satin</span></li>
+            <li><span class="meta-label">Size</span><span>Standard · 56"</span></li>
+          </ul>
+          <p class="product-desc">Deep velvety wine-red satin in a dramatic sweeping tail umbrella silhouette. For the woman who fills a room simply by entering it.</p>
+          <div class="product-footer">
+            <span class="product-price">Rs. 3,000</span>
+            <a class="product-order-btn" href="https://wa.me/923294271035?text=Hi%2C%20I%20am%20interested%20in%20the%20Tail%20Umbrella%20Satin%20Abaya%20in%20Burgundy" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-placeholder">
+          <span class="product-badge badge-gold">Premium</span>
+          <svg class="img-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Two-Tone Marble · Ivory &amp; Choc</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Two-Tone Marble Print Abaya</div>
+          <ul class="product-meta">
+            <li><span class="meta-label">Colour</span><span>Ivory &amp; Chocolate</span></li>
+            <li><span class="meta-label">Fabric</span><span>Marble Print</span></li>
+            <li><span class="meta-label">Size</span><span>Standard · 56"</span></li>
+          </ul>
+          <p class="product-desc">Creamy ivory with sweeping marbled brown lines flowing into rich chocolate. Contrast rose-gold cuffs. Wearable art.</p>
+          <div class="product-footer">
+            <span class="product-price">Rs. 3,500</span>
+            <a class="product-order-btn" href="https://wa.me/923294271035?text=Hi%2C%20I%20am%20interested%20in%20the%20Two-Tone%20Marble%20Abaya%20in%20Ivory%20and%20Chocolate" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. INSTAGRAM GALLERY -->
+<section id="instagram" aria-label="Follow us on Instagram">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Follow Along</span>
+      <h2 class="section-title">@stm_abaya_collection</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="instagram-grid">
+      <a class="instagram-tile" href="https://instagram.com/stm_abaya_collection" target="_blank" rel="noopener noreferrer">Add your Instagram photo here</a>
+      <a class="instagram-tile" href="https://instagram.com/stm_abaya_collection" target="_blank" rel="noopener noreferrer">Add your Instagram photo here</a>
+      <a class="instagram-tile" href="https://instagram.com/stm_abaya_collection" target="_blank" rel="noopener noreferrer">Add your Instagram photo here</a>
+      <a class="instagram-tile" href="https://instagram.com/stm_abaya_collection" target="_blank" rel="noopener noreferrer">Add your Instagram photo here</a>
+    </div>
+    <a class="btn btn-primary" href="https://instagram.com/stm_abaya_collection" target="_blank" rel="noopener noreferrer" style="display:block;max-width:260px;margin:0 auto;text-align:center">Follow on Instagram</a>
+  </div>
+</section>
+
+<!-- 8. FINAL CALL TO ACTION -->
+<section id="final-cta" aria-label="Order Now">
+  <div class="gold-rule"></div>
+  <h2>Ready to Find Your Perfect Abaya?</h2>
+  <p>Browse our full collection and order directly through WhatsApp. Cash on Delivery available across Pakistan.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="#categories">Browse Collection</a>
+    <a class="btn btn-outline" href="https://wa.me/923294271035?text=Hi%2C%20I%20would%20like%20to%20order%20from%20STM%20Abaya%20Collections">Order on WhatsApp</a>
+    <a class="btn btn-outline" href="https://instagram.com/stm_abaya_collection" target="_blank" rel="noopener noreferrer">Message on Instagram</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section-pad section-ivory" aria-label="About STM Abaya Collections">
+  <div class="container">
+    <div class="about-inner">
+      <span class="section-label" style="text-align:center;display:block">Our Story</span>
+      <h2 class="section-title" style="text-align:center;margin-bottom:32px">About Us</h2>
+      <div class="gold-rule" style="margin-bottom:36px"></div>
+      <p class="about-text">STM Abaya Collections brings elegant and modest abayas designed for women who value comfort, quality and timeless style. We believe that dressing modestly should never mean choosing less — every piece in our collection is crafted to make you feel graceful, confident and beautiful.</p>
+      <div class="about-badges">
+        <span class="about-badge">Est. 2024</span>
+        <span class="about-badge">Pakistan</span>
+        <span class="about-badge">Modest Fashion</span>
+        <span class="about-badge">COD Available</span>
+        <span class="about-badge">Nationwide Delivery</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. CONTACT -->
+<section id="contact" aria-label="Contact Us">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Get in Touch</span>
+      <h2 class="section-title">Contact Us</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="contact-buttons">
+      <a class="contact-btn btn-whatsapp" href="https://wa.me/923294271035?text=Hi%2C%20I%20would%20like%20to%20order%20from%20STM%20Abaya%20Collections" target="_blank" rel="noopener noreferrer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.528 5.845L0 24l6.335-1.508A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.366l-.36-.213-3.727.977.994-3.637-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+        WhatsApp Us
+      </a>
+      <a class="contact-btn btn-instagram" href="https://instagram.com/stm_abaya_collection" target="_blank" rel="noopener noreferrer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Message on Instagram
+      </a>
+    </div>
+    <div class="contact-details">
+      <span class="contact-pill">📦 Cash on Delivery Available</span>
+      <span class="contact-pill">🚚 Nationwide Delivery Across Pakistan</span>
+      <span class="contact-pill">📱 +92 329 4271035</span>
+      <span class="contact-pill">📸 @stm_abaya_collection</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-brand">STM <span>Abaya</span> Collections</p>
+  <p class="footer-tagline">Elegant &amp; Modest Fashion</p>
+  <div class="footer-divider"></div>
+  <ul class="footer-links">
+    <li><a href="#categories">Collections</a></li>
+    <li><a href="#new-arrivals">New Arrivals</a></li>
+    <li><a href="#best-sellers">Best Sellers</a></li>
+    <li><a href="#how-to-order">How to Order</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <p class="footer-info">📦 COD Available Across Pakistan &nbsp;|&nbsp; 🚚 Nationwide Delivery</p>
+  <p class="footer-info">Instagram: <a href="https://instagram.com/stm_abaya_collection" target="_blank" rel="noopener noreferrer" style="color:var(--gold)">@stm_abaya_collection</a></p>
+  <p class="footer-info">WhatsApp: <a href="https://wa.me/923294271035" target="_blank" rel="noopener noreferrer" style="color:var(--gold)">+92 329 4271035</a></p>
+  <p class="footer-copy">&copy; 2024 STM Abaya Collections. All rights reserved.</p>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a class="wa-float" href="https://wa.me/923294271035?text=Hi%2C%20I%20would%20like%20to%20order%20from%20STM%20Abaya%20Collections" target="_blank" rel="noopener noreferrer" aria-label="Order on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.528 5.845L0 24l6.335-1.508A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.366l-.36-.213-3.727.977.994-3.637-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+</a>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var links = document.getElementById('nav-links');
+  toggle.addEventListener('click', function() {
+    var open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  document.querySelectorAll('.nav-links a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* =============================================
+     DATA CONNECTION — reads from the same
+     localStorage database the Admin Panel uses
+     (key: stmProducts). Runs on page load and
+     whenever storage changes in another tab.
+  ============================================= */
+  var WA = '923294271035';
+
+  function buildCard(p, badge) {
+    var badgeHtml = badge ? '<span class="product-badge' + (badge === 'Premium' || badge === 'Best Seller' ? ' badge-gold' : '') + '">' + badge + '</span>' : '';
+    var imgHtml = p.imageUrl
+      ? '<img src="' + p.imageUrl + '" alt="' + p.name + '" style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block;">'
+      : '<div class="product-img-placeholder">' + badgeHtml + '<svg class="img-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg><span>' + (p.name || 'Product Photo') + '</span></div>';
+    var waText = encodeURIComponent('Hi, I am interested in ' + (p.name || 'an abaya') + (p.color ? ' in ' + p.color : '') + ' from STM Abaya Collections');
+    var waLink = 'https://wa.me/' + WA + '?text=' + waText;
+    var availability = p.availability || 'In Stock';
+    var availColor = availability === 'Out of Stock' ? '#c0392b' : '#2ecc71';
+    return '<div class="product-card">'
+      + (p.imageUrl ? '<div style="position:relative">' + (badge ? '<span class="product-badge' + (badge === 'Premium' || badge === 'Best Seller' ? ' badge-gold' : '') + '" style="position:absolute;top:14px;left:14px;z-index:2">' + badge + '</span>' : '') + imgHtml + '</div>' : imgHtml)
+      + '<div class="product-info">'
+      + '<div class="product-name">' + (p.name || '[Product Name]') + '</div>'
+      + '<ul class="product-meta">'
+      + (p.color ? '<li><span class="meta-label">Colour</span><span>' + p.color + '</span></li>' : '')
+      + (p.fabric ? '<li><span class="meta-label">Fabric</span><span>' + p.fabric + '</span></li>' : '')
+      + (p.style ? '<li><span class="meta-label">Style</span><span>' + p.style + '</span></li>' : '')
+      + '<li><span class="meta-label">Size</span><span>Standard · ' + (p.length || '56"') + '</span></li>'
+      + '<li><span class="meta-label">Availability</span><span style="color:' + availColor + ';font-weight:700">' + availability + '</span></li>'
+      + '</ul>'
+      + (p.description ? '<p class="product-desc">' + p.description + '</p>' : '')
+      + '<div class="product-footer">'
+      + '<span class="product-price">Rs. ' + (p.price || '—') + '</span>'
+      + '<a class="product-order-btn" href="' + waLink + '" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>'
+      + '</div></div></div>';
+  }
+
+  function renderGrid(gridId, products, badge) {
+    var el = document.getElementById(gridId);
+    if (!el) return;
+    if (!products || products.length === 0) return; // keep placeholders if no products yet
+    el.innerHTML = products.map(function(p) { return buildCard(p, badge); }).join('');
+  }
+
+  function loadProducts() {
+    var raw = localStorage.getItem('stm_products');
+    if (!raw) return;
+    var all;
+    try { all = JSON.parse(raw); } catch(e) { return; }
+    if (!Array.isArray(all) || all.length === 0) return;
+
+    // Filter by category
+    var newArrivals  = all.filter(function(p){ return p.category === 'New Arrivals'; });
+    var bestSellers  = all.filter(function(p){ return p.category === 'Best Sellers'; });
+    var everyday     = all.filter(function(p){ return p.category === 'Collection' || p.category === 'Everyday'; });
+    var premium      = all.filter(function(p){ return p.category === 'Premium Collection' || p.category === 'Premium'; });
+
+    // Featured: first 3 from any category
+    var featured = all.slice(0, 3);
+
+    renderGrid('grid-featured',      featured,    null);
+    renderGrid('grid-new-arrivals',  newArrivals, 'New');
+    renderGrid('grid-best-sellers',  bestSellers, 'Best Seller');
+    renderGrid('grid-everyday',      everyday,    null);
+    renderGrid('grid-premium',       premium,     'Premium');
+  }
+
+  // Run on load
+  loadProducts();
+
+  // Re-render when admin panel updates localStorage in another tab
+  window.addEventListener('storage', function(e) {
+    if (e.key === 'stm_products') loadProducts();
+  });
+</script>
+</body>
+</html>
